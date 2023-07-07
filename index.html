@@ -1,39 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Icon Link Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Link to the stylesheet -->
     <link rel="stylesheet" href="css/main.css">
+
     <title>Craving Bakery</title>
 </head>
+
 <body>
-    <header>
-        <img src="images/logo.png" alt="Carving Bakery Logo">
-        <div class="nav-bar">
-            <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">PRODUCTS</a></li>
-                <li><a href="#">SERVICES</a></li>
-                <li><a href="#">CONTACT US</a></li>
-                <li><a href="#">CART</a></li>
+    <header class="masthead max-width">
+        <!-- Header with logo and nav bar -->
+        <a href="index.html">
+            <div class="site-logo">
+                <img src="images/logo.png" alt="Carving Bakery"> 
+            </div>
+        </a>
+        <nav class="navbar">
+            <ul class="main-nav">
+                <li><a href="index.html" class="current">HOME</a></li>
+                <li><a href="products.html">PRODUCTS</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+                <li><a href="cart.html">CART</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
 
-    <main>
+    <!-- Starting the main content of the page -->
+    <main class="main max-width">
         <div class="main-content">
-            <div class="img-banner">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
+            <div class="banner-container">
+                <img src="images/cake.jpg" alt="Cake">
+                <img src="images/croissant.jpg" alt="Croissant">
+                <img src="images/macaroon.jpg" alt="Macaroon">
             </div>
 
-            <h2>This is the main content.</h2>
+            <div class="main-text">
+                <h2>Craving for sweets for your important moments?</h2>
+                    <p>
+                        We aim to serve our community and beyond with our unique catering services, authenticity, and values.
+                    </p>
+            </div>
+            <div class="btn-container">
+                <button class="btn btn1">Start Your Dessert Journey!</button>
+            </div>
+
         </div>
     </main>
-    
-    <footer>copyright</footer>
+    <!-- Site footer -->
+    <footer class="site-footer max-width">
+        <div class="footer-text">
+            <p>
+                &copy; Copyright Craving Bakery, 2023
+            </p>
+            <p>
+                All the pictures are taken from the <a href="https://unsplash.com/">Unsplash</a>
+            </p>
+        </div>
+    </footer>
 
 </body>
 </html>
