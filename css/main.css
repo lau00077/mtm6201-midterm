@@ -1,32 +1,45 @@
 /* Global Styles */
 html {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: grey;
 }
 
-body {
-    line-height: 1;
-}
-
-button:active {
-    transform: translateY(1px)
-}
-
-/* Mobile Site Styles */
-.max-width {
-    max-width: 1200px;
-    margin: 0 auto;
-    justify-content: center;
-}
-
-.navbar li {
-    list-style: none;
+h1,
+h2 {
+    font-family: cursive;
     text-align: center;
 }
 
-/* Center the logo */
+button:active {
+    transform: translateY(1px);
+}
+
+/* LoVe HAte styles */
+a,
+a:link,
+a:visited {
+    color: darkolivegreen;
+}
+
+a:hover,
+a:focus {
+    color: #207963;
+}
+
+/*************************
+    Mobile Site Styles 
+ *************************/
+
+.max-width {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Style the heading */
+/* Center the site logo display */
 .site-logo {
     display: flex;
-    width: 500px;
+    width: 400px;
     margin: 0 auto;
 }
 
@@ -35,7 +48,7 @@ button:active {
     max-height: 100%;
 }
 
-/* Style the images banner */
+/* Style multiple images for the banner */
 .banner-container {
     display: flex;
     flex-direction: column;
@@ -47,6 +60,15 @@ button:active {
 }
 
 /* Style the navigation */
+.navbar li {
+    list-style: none;
+    text-align: center;
+}
+
+ul {
+    padding: 0;
+}
+
 .main-nav a {
     display: block;
     padding: 1em 0;
@@ -57,7 +79,7 @@ button:active {
 .main-nav a:hover,
 .main-nav a:focus,
 .main-nav a.current {
-    background-color:beige;
+    background-color:rgb(245, 255, 213);
     color: rgb(12, 63, 60);
 }
 
@@ -65,7 +87,6 @@ button:active {
     justify-content: center;
     text-align: center;
     margin-top: 10px;
-    color: grey;
     font-family: cursive;
 }
 
@@ -77,7 +98,7 @@ button:active {
 }
 
 .btn {
-    background-color:palevioletred;
+    background-color:slateblue;
     color: white;
     border: none;
     padding: 20px;
@@ -90,6 +111,103 @@ footer {
     text-align: center;
     padding: 8px;
 }
+
+/* Style the Product Page */
+
+.product-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+}
+
+.product-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.itemcontent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.add-to-cart {
+    background-color: slateblue;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .add-to-cart:hover {
+    background-color: #45a049;
+  }
+
+/* Style the contact form page */
+/* Header */
+.contact-text h2 {
+    text-align: center;
+}
+
+/* Style the contact form */
+.contact-box {
+    margin: 20px auto;
+    padding: 10px;
+    width: 90%;
+}
+
+.contactus-cake {
+    display: none;
+}
+
+.contact-box {
+    background: url(../images/contacus_cake.jpg) no-repeat;
+    background-size: cover;
+    padding: 50px 0;
+}
+
+input [text=text],
+textarea {
+    width: 100%;
+    padding: 5px;
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid grey;
+}
+
+#name,
+#email {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    box-sizing: border-box;
+    border-bottom: 1px solid grey;
+    margin-bottom: 20px;
+}
+
+.form-button {
+    display: grid;
+    justify-content: center;
+    padding: 10px;
+}
+
+.button {
+    background-color: slateblue;
+    color: white;
+    width: 200px;
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+
 
 /* Desktop Site Styles */
 
@@ -120,4 +238,55 @@ footer {
     .banner-container img {
         width: 33.33%;
     }
+
+    /* Desktop Site Styles - Product page */
+    .product-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    /* Desktop Site Styles - Contact us page, use a grid box to create layout */
+
+    .contact-box {
+        background-image: none;
+    }
+
+    .contactus-cake {  
+        display: flex;
+        width: 300px;
+        margin: 0 auto;
+    }
+    
+
+    .contact-text {
+        margin: 0 auto;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+        "img form form form"
+        "email email email email"
+        "map map map map";
+        gap: 10px;
+        justify-content: center;
+    }
+    
+    .contactus-cake {
+        grid-area: img;
+    }
+    
+    .contact-box {
+        grid-area: form;
+    }
+    
+    .contact-info {
+        grid-area: email;
+    }
+    
+    .location-map {
+        grid-area: map;
+    }
+
 }
+
+
