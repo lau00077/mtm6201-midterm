@@ -153,7 +153,24 @@ footer {
     padding: 8px;
 }
 
-/* Style the Product Page */
+/* Style the product page */
+
+/* Style the skip links */
+.skip-link-container {
+    display:flex;
+    justify-content: center;
+}
+
+/* Adjust the desired space between skip links */
+.skip-link + .skip-link {
+    margin-left: 10px; 
+  }
+
+.skip-link {
+    text-decoration: none;
+    border: 2px solid grey;
+    padding: 10px;
+}
 
 .product-container {
     display: grid;
