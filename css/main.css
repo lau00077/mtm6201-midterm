@@ -48,13 +48,13 @@ a:focus {
     max-height: 100%;
 }
 
-/* Style multiple images for the banner */
+/* Style multiple images for the banner and make it display vertically*/
 .banner-container {
     display: flex;
     flex-direction: column;
 }
 
-.image-container img {
+.scrolling-banner img {
     max-width: 100%;
     height: auto;
 }
@@ -90,21 +90,62 @@ ul {
     font-family: cursive;
 }
 
-/* Style the button */
+/* Style the homepage button and add animation */
 .btn-container {
     display: flex;
     justify-content: center;
-    padding: 8px;
+    margin: 20px 20px;
 }
 
 .btn {
-    background-color:slateblue;
-    color: white;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: slateblue;
+    color: #fff;
     border: none;
-    padding: 20px;
-    border-radius: 20px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
+.animated-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.animated-button:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 50%;
+    left: 0;
+    background-color: lightseagreen;
+    transition: height 0.3s ease;
+    z-index: -1;
+}
+
+.animated-button:hover:before {
+    height: 100%;
+}
+
+@keyframes buttonScale {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.animated-button:hover {
+    animation: buttonScale 0.5s infinite;
+}
+
+/* Home page - footer */
 footer {
     background-color: beige;
     color: grey;
@@ -232,13 +273,34 @@ textarea {
         flex: 1;
     }
 
-    .banner-container {
+    .scrolling-container {
         display: flex;
         flex-direction: row;
     }
 
-    .banner-container img {
+    .scrolling-banner img {
         width: 33.33%;
+    }
+
+    /* Adding animation to the banner by using keyframes */
+
+    .scrolling-banner {
+        display: inline-block;
+        white-space: nowrap;
+        animation: scrolling 1s linear 1;
+      }
+
+    .scrolling-banner img {
+        display: inline-block;
+    }
+    
+    @keyframes scrolling {
+        0% {
+        transform: translateX(50%);
+        }
+        100% {
+        transform: translateX(0%);
+        }
     }
 
     /* Desktop Site Styles - Product page */

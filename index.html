@@ -18,18 +18,22 @@
 <body>
     <header class="masthead max-width" role="banner">
         <!-- Header with logo and nav bar -->
-        <a href="index.html">
-            <div class="site-logo">
-                <img src="images/logo.png" alt="Carving Bakery"> 
-            </div>
-        </a>
+        <div class="main-logo">
+            <a href="index.html">
+                <div class="site-logo">
+                    <img src="images/logo.png" alt="Carving Bakery">
+                </div>
+            </a>
+
+        </div>
         <nav class="navbar" role="navigation">
             <ul class="main-nav">
                 <li><a href="index.html" class="current">HOME</a></li>
                 <li><a href="products.html">PRODUCTS</a></li>
                 <li><a href="services.html">SERVICES</a></li>
                 <li><a href="contact.html">CONTACT US</a></li>
-                <li><a href="cart.html">CART <i class="fa-solid fa-cart-shopping fa-bounce" style="color: #207963;"></i></a></li>
+                <li><a href="cart.html">CART <i class="fa-solid fa-cart-shopping fa-bounce"
+                            style="color: #207963;"></i></a></li>
             </ul>
         </nav>
     </header>
@@ -37,24 +41,30 @@
     <!-- Starting the main content of the page -->
     <main class="main max-width" role="main">
         <div class="main-content">
+            <!-- Adding the banners -->
             <div class="banner-container">
-                <img src="images/cake.jpg" alt="A delicious cake" role="presentation">
-                <img src="images/croissant.jpg" alt="A fresh croissant" role="presentation">
-                <img src="images/macaroon.jpg" alt="Colorful macaroon" role="presentation">
+                <div class="scrolling-banner">
+                    <img src="images/cake.jpg" alt="A delicious cake" role="presentation">
+                    <img src="images/croissant.jpg" alt="A fresh croissant" role="presentation">
+                    <img src="images/macaroon.jpg" alt="A Colorful macaroon" role="presentation">
+                </div>
             </div>
 
             <div class="main-text">
                 <h1>Craving for sweets for your important moments?</h1>
-                    <p>
-                        We aim to serve our community and beyond with our unique catering services, authenticity, and values.
-                    </p>
-            </div>
-            <div class="btn-container">
-                <a href="products.html">
-                <button class="btn btn1">Start Your Dessert Journey <i class="fa-solid fa-cookie-bite fa-beat-fade fa-lg"></i>
-                </button></a>
+                <p>
+                    We aim to serve our community and beyond with our unique catering services, authenticity, and
+                    values.
+                </p>
             </div>
 
+            <!-- Adding a button redirect to products page -->
+            <div class="btn-container">
+                <a href="products.html">
+                    <button class="btn btn1 animated-button">Start Your Dessert Journey <i
+                            class="fa-solid fa-cookie-bite fa-beat-fade fa-lg"></i>
+                    </button></a>
+            </div>
         </div>
     </main>
     <!-- Site footer -->
@@ -64,12 +74,13 @@
                 &copy; Copyright Craving Bakery, 2023
             </p>
             <p>
-                All the pictures are taken from the <a href="https://unsplash.com/" target="_blacnk" rel="noopener">Unsplash</a>
+                All the pictures are taken from the <a href="https://unsplash.com/" target="_blacnk"
+                    rel="noopener">Unsplash</a>
             </p>
         </div>
     </footer>
 
 
-
 </body>
+
 </html>
